@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio id="music" src="./生日祝福歌-格格.mp3"></audio>
+</body>
+<script type="text/javascript">
+    window.onload = function(){
+             setInterval("toggleSound()",100);
+        }
+
+    function toggleSound() {
+                var music = document.getElementById("music");//获取ID  
+                    
+                if (music.paused) { //判读是否播放  
+                    music.paused=false;
+                    music.play(); //没有就播放 
+                }    
+        }
+</script>
+
+</html>
